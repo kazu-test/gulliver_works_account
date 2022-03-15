@@ -5,6 +5,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { useCurrentAccount } from '../../hooks/useCurrentAccount';
 import styles from './style.module.scss';
 import { SignInParams, useSignInPresenter } from './useSignInPresenter';
+import Eye from './Vector';
 
 const SignInPage = () => {
   const { register, handleSubmit } = useForm<SignInParams>();
@@ -26,6 +27,7 @@ const SignInPage = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <InputText title="メールアドレス">
             <input
+              type="text"
               className={styles.mail}
               name="account.email"
               ref={register}
@@ -34,15 +36,19 @@ const SignInPage = () => {
           </InputText>
           <InputText title="パスワード">
             <input
+              type="password"
               name="account.password"
               className={styles.password}
               ref={register}
               placeholder="パスワードを入力"
             />
+            <Eye />
           </InputText>
 
-          <button>ログイン</button>
-          <Link to="/">ホームへ</Link>
+          <button className={styles.loginButton}>ログイン</button>
+          <a className={styles.aTag} href="">
+            パスワードを忘れた方はこちら
+          </a>
         </form>
       </div>
     </div>

@@ -9,7 +9,7 @@ type Props = {
 const Group148: VFC<Props> = ({ children, title }) => {
   return (
     <>
-      <p style={{ marginBottom: '8px' }}>{title}</p>
+      <p style={{ marginBottom: '8px', textAlign: 'left' }}>{title}</p>
       <div className={styles.main}>{children}</div>
     </>
   );
