@@ -49,6 +49,7 @@ const SignInPage = () => {
           <a className={styles.aTag} href="">
             パスワードを忘れた方はこちら
           </a>
+          <button className={styles.registerButton}>新規登録はこちら</button>
         </form>
       </div>
     </div>
