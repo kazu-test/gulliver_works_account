@@ -42,7 +42,7 @@ const SignInPage = () => {
               ref={register}
               placeholder="パスワードを入力"
             />
-            <Eye />
+            <Eye className={styles.eye} />
           </InputText>
 
           <button className={styles.loginButton}>ログイン</button>
